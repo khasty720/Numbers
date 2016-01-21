@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numbers Game Results:</strong>
+  <p>Your Number: <%= @number.input %></p>
+  <p>Our Number:  <%= @random_number %></p>
+
+  <% if @result == true %>
+    <p> You Win! </p>
+  <% else %>
+    <p> Sorry you lose </p>
+  <% end %>
+
+  <%= link_to 'Play Again?', new_number_path %>
+</p>

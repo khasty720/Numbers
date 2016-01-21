@@ -1,0 +1,19 @@
+
+<%= form_for(@dog) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :breed %><br>
+    <%= f.text_field :breed %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.order('username ASC').all, :id, :username %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: "btn"%>
+  </div>
+<% end %>

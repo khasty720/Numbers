@@ -1,0 +1,16 @@
+
+<h1>Random Number Game</h1>
+<p>Please guess a number between 1 and 10:</p>
+
+<p> Number 1: <%= @number1%> </p>
+<p> Number 2: <%= @number2%> </p>
+
+<p>
+<%= form_tag(compare_number_path) do |f|%>
+<%#= f.label :numberID %>:
+<%#= f.text_field :numberID %><br />
+<%#= f.submit %>
+<% end %>
+</p>
+
+<%= render 'answer', :result => @result %>

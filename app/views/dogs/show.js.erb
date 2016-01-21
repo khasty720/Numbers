@@ -1,0 +1,4 @@
+$('#dog').hide().fadeIn('slow');
+//$('#user').hide().animate({backgroundColor: '#FF0000'}, 'slow')
+//escape_javascript(render 'dog_show', :dog => @dog) // allows access to erb
+$("#dog").html("<%= escape_javascript(render 'dog_show', :dog => @dog) %>");
